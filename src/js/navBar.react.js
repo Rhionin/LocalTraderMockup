@@ -10,12 +10,12 @@ var NavBar = React.createClass( {
         if (this.state.logged_in) {
             user_info = <UserInfo />
         } else {
-        	user_info = <button className="btn" onClick={this.handleClick}>Login</button>
+        	user_info = <button className="btn btn-login" onClick={this.handleClick}>Login</button>
         }
 		return (
 /* jshint ignore:start */
 			<div>
-				<nav className="navbar navbar-default">
+				<nav className="navbar navbar-default main-header">
 					<div className="content-container">
 						<div className="navbar-header">
 							<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

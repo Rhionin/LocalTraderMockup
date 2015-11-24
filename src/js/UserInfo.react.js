@@ -8,9 +8,9 @@ var UserInfo = React.createClass( {
     },
 	render: function() {
 		return (
-			<div>
+			<div className="user-info-box">
 				 <Smile />
-				 <i className="fa fa-frown-o fa-2x"></i>
+				 <Frown />
 			</div>
 		);
 	}

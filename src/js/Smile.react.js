@@ -8,7 +8,7 @@ var Smile = React.createClass( {
     },
 	render: function() {
 		return (
-			 <i className="fa fa-smile-o fa-2x"><button onClick={this.handlePositiveClick}>{this.state.positive}</button></i>
+			 <img src="../src/images/face-happy.jpg" className="face-image"><button onClick={this.handlePositiveClick}>{this.state.positive}</button></img>
 		);
 	}
 });
