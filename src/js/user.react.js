@@ -65,8 +65,8 @@ var user = [
 		sales: 455,
 		purchases: 344,
 		location: {
-			lat: 40.226072729473884,
-			lng: -111.65611267089844
+			lat: 40.293514,
+			lng: -111.699368
 		}
 	},
 	{
@@ -79,8 +79,8 @@ var user = [
 		sales: 4000,
 		purchases: 0,
 		location: {
-			lat: 40.25490063795337,
-			lng: -111.6701889038086
+			lat: 40.303301,
+			lng: -111.689326
 		}
 	},
 	{
@@ -144,26 +144,50 @@ var user = [
 var products = [
     {
         name: 'Digital Camera',
+        category: 'Electronics',
         description: 'A camera so digital that it has pixels. Mind blown.',
         image: 'https://images-na.ssl-images-amazon.com/images/G/01/electronics/cameras/samsung/2011/c26-B004OZ922E-1-l.jpg',
         seller: user[0]
     },
     {
         name: 'Adorable puppy',
+        category: 'Pets',
         description: 'My dog had puppies. Can\'t keep them all, so please give them a loving home! <3',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJrap7s8HRCCC4KOhkd1SrZ94jvS0F1_h8Ohmme0iJPUszS1czjl-8Uc4',
         seller: user[1]
     },
     {
         name: 'Fireworks',
+        category: 'Misc',
         description: 'Why do I still have fireworks? Independence day was like, forever ago.',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQNjV0yjQGauptx9bibYS80StBiDwoMxOeFtA0xahzbiy6MMCn',
         seller: user[2]
     },
     {
         name: 'Cheetos',
+        category: 'Misc',
         description: 'These are stale. I don\'t want them.',
         image: 'https://macmalloryo.edublogs.org/files/2014/03/cheetosawesome-1sa4d06.jpg',
         seller: user[3]
+    },
+    {
+        name: 'Ghetto Blaster',
+        category: 'Electronics',
+        description: 'Blew my hearing away. Don\'t need it anymore.',
+        image: 'http://thumbs.dreamstime.com/z/retro-ghetto-blaster-18850075.jpgQ==',
+        seller: user[4]
+    },
+    {
+        name: 'Couch',
+        category: 'Furniture',
+        description: 'Grew its own ecosystem. Go take it sledding.',
+        image: 'http://www.theresilientfamily.com/wp-content/uploads/2012/01/old-couch.jpg',
+        seller: user[5]
     }
 ];
+
+function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+}
+
+var productCategories = products.map(function(product) { return product.category || 'Misc'; }).filter(onlyUnique);
