@@ -1,6 +1,6 @@
 var Frown = React.createClass( {
     getInitialState: function () {
-        return {negative: 12};
+        return {negative: 53};
     },
     handlePositiveClick: function () {
         console.log('test');

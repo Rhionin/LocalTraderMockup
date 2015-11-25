@@ -1,6 +1,6 @@
 var Smile = React.createClass( {
     getInitialState: function () {
-        return {positive: 12};
+        return {positive: 432};
     },
     handlePositiveClick: function () {
         console.log('test');
