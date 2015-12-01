@@ -25,7 +25,10 @@ ReactDOM.render(
             <Route path="/sellers" component={Sellers}/>
             <Route path="/learnmore" component={LearnMore}/>
             <Route path="/sellerinfo" component={SellerInfo}/>
+            <Route path="/products" component={Products}/>
+            <Route path="/myRatings" component={MyRatings}/>
         </Route>
     </Router>,
     document.getElementById('root')
 )
+            // <Route path="/products/:q" component={Products} /> // https://github.com/rackt/react-router/blob/master/examples/query-params/app.js

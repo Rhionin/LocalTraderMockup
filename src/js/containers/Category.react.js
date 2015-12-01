@@ -1,119 +1,101 @@
-var Sp = React.createClass({
+var Cat = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<span>{this.props.name}</span><br />
+				<a href="#/products" >{this.props.name}</a><br />
 			</div>
 		);
 	}
 })
 
 
+var AvgRating = React.createClass({
+	render: function() {
+		return(
+			<div>
+				<p style={{textAlign:"center"}}>average ratings</p>
+				<UserInfo />
+			</div> 
+		);
+	}
+})
+
+
+var MainCat = React.createClass({
+	getInitialState: function() {
+        return { showRating: false };
+    },
+	handleClick: function() {
+		this.setState({ 
+			showRating: !this.state.showRating
+		});
+	},
+	render: function() {
+		return (<div>
+				<a onClick={this.handleClick}>{this.props.name}</a> <br />
+				{ this.state.showRating ? <AvgRating /> : null }
+			</div>
+		)
+	}
+})
+
+// var Rating = React.createClass({
+// 	render: function() {
+// 		<Us
+// 	}
+// });
+
+
 var Category = React.createClass( {
 	render: function() {
 		var categories = [
 			{
-				name: "Category 1",
+				name: "Electronics",
 				sub_categories: [
-					"Sub category1",
-					"Sub category2",
-					"Sub category3",
-					"Sub category4",
-					"Sub category5",
-					"Sub category6",
-					"Sub category7",
-					"Sub category8",
+					"Televisions",
+					"Cell Phones",
+					"Video Games",
+					"Computers"
 				]
 			},
 			{
-				name: "Category 2",
+				name: "Housing",
 				sub_categories: [
-					"Sub category1",
-					"Sub category2",
-					"Sub category3",
-					"Sub category4",
-					"Sub category5",
-					"Sub category6",
-					"Sub category7",
-					"Sub category8",
+					"For Rent",
+					"For Sale",
+					"Sublets"
 				]
 			},
 			{
-				name: "Category 3",
+				name: "Jobs",
 				sub_categories: [
-					"Sub category1",
-					"Sub category2",
-					"Sub category3",
-					"Sub category4",
-					"Sub category5",
-					"Sub category6",
-					"Sub category7",
-					"Sub category8",
+					"Part Time",
+					"Full Time",
+					"Seasonal",
+					"Temporary"
 				]
 			},
 			{
-				name: "Category 4",
+				name: "Auto",
 				sub_categories: [
-					"Sub category1",
-					"Sub category2",
-					"Sub category3",
-					"Sub category4",
-					"Sub category5",
-					"Sub category6",
-					"Sub category7",
-					"Sub category8",
+					"Cars",
+					"Trucks",
+					"SUVs",
+					"CUVs",
+					"Motorcycle",
+					"Scooters",
+					"Misc"
 				]
 			},
 			{
-				name: "Category 5",
+				name: "Clothing",
 				sub_categories: [
-					"Sub category1",
-					"Sub category2",
-					"Sub category3",
-					"Sub category4",
-					"Sub category5",
-					"Sub category6",
-					"Sub category7",
-					"Sub category8",
-				]
-			},
-			{
-				name: "Category 6",
-				sub_categories: [
-					"Sub category1",
-					"Sub category2",
-					"Sub category3",
-					"Sub category4",
-					"Sub category5",
-					"Sub category6",
-					"Sub category7",
-					"Sub category8",
-				]
-			},
-			{
-				name: "Category 7",
-				sub_categories: [
-					"Sub category1",
-					"Sub category2",
-					"Sub category3",
-					"Sub category4",
-					"Sub category5",
-					"Sub category6",
-					"Sub category7",
-					"Sub category8",
-				]
-			},
-			{
-				name: "Category 8",
-				sub_categories: [
-					"Sub category1",
-					"Sub category2",
-					"Sub category3",
-					"Sub category4",
-					"Sub category5",
-					"Sub category6",
-					"Sub category7",
-					"Sub category8",
+					"Tops (women)",
+					"Bottoms (women)",
+					"Misc (women)",
+					"Tops (men)",
+					"Bottoms (men)",
+					"Misc (men)"
 				]
 			}
 		];
@@ -121,16 +103,19 @@ var Category = React.createClass( {
 			var sub_cat = category.sub_categories.map(function(sub_category) {
 				return (
 					<div>
-						<Sp name={sub_category} /> <br />
+						<Cat name={sub_category} /> <br />
 					</div>
 				)
-			});
+			}, this);
 			return (
-				<div>
-					<Sp name={category.name} /><br />{sub_cat}
+				<div className="col-xs-6 col-md-4">
+					<MainCat name={category.name} /><br /> 
+					<ul className="no-bullet"> 
+						<li>{sub_cat}</li>
+					</ul>
 				</div>
 			)
-		});
+		}, this);
 		return (
 			<div>{content}</div>
 		);

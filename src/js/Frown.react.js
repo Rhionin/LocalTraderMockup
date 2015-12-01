@@ -8,7 +8,11 @@ var Frown = React.createClass( {
     },
 	render: function() {
 		return (
-			 <img src="../src/images/face-sad.jpg" className="face-image"><button onClick={this.handlePositiveClick}>{this.state.negative}</button></img>
+		    <a href="#/myRatings">
+			    <img src="../src/images/face-sad.jpg" className="face-image">
+			        <button>{this.state.negative}</button>
+			    </img>
+			</a>
 		);
 	}
 });

@@ -82,7 +82,11 @@ var user = [
 			lat: 40.303301,
 			lng: -111.689326
 		}
-	},
+	}
+];
+
+var secondary_users = [
+	
 	{
 		name: 'Jean Luc Picage',
 		img: '../src/images/JeanLucPicard.jpg',
@@ -184,6 +188,84 @@ var products = [
         image: 'http://www.theresilientfamily.com/wp-content/uploads/2012/01/old-couch.jpg',
         seller: user[5]
     }
+];
+
+var seller_products = [
+	[
+	    {
+	        name: 'Digital Camera',
+	        category: 'Electronics',
+	        description: 'A camera so digital that it has pixels. Mind blown.',
+	        image: 'https://images-na.ssl-images-amazon.com/images/G/01/electronics/cameras/samsung/2011/c26-B004OZ922E-1-l.jpg',
+	        seller: user[0]
+	    },
+	    {
+	        name: 'High Pixel Camera',
+	        category: 'Electronics',
+	        description: 'Ultimate resolution.',
+	        image: 'https://farm4.staticflickr.com/3487/cameras/72157602280763141_model_huge_7523f21cc2.jpg',
+	        seller: user[0]
+	    }
+	],
+	[
+	    {
+	        name: 'Adorable puppy',
+	        category: 'Pets',
+	        description: 'My dog had puppies. Can\'t keep them all, so please give them a loving home! <3',
+	        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJrap7s8HRCCC4KOhkd1SrZ94jvS0F1_h8Ohmme0iJPUszS1czjl-8Uc4',
+	        seller: user[1]
+	    },
+	    {
+	        name: 'Friendly Alligator',
+	        category: 'Pets',
+	        description: 'A very friendly Alligator',
+	        image: 'http://muchmoremuchier.files.wordpress.com/2012/03/gator.jpg',
+	        seller: user[1]
+	    },
+	    {
+	        name: 'Rabid Hippo',
+	        category: 'Pets',
+	        description: 'crushed my cat...  must get rid of it.',
+	        image: 'http://hippocritical.net/wp-content/uploads/2014/03/pet-hippo-Humphrey_2055153i.jpg',
+	        seller: user[1]
+	    }
+    ],
+    [
+	    {
+	        name: 'Fireworks',
+	        category: 'Misc',
+	        description: 'Why do I still have fireworks? Independence day was like, forever ago.',
+	        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQNjV0yjQGauptx9bibYS80StBiDwoMxOeFtA0xahzbiy6MMCn',
+	        seller: user[2]
+	    },
+    ],
+    [
+	    {
+	        name: 'Cheetos',
+	        category: 'Misc',
+	        description: 'These are stale. I don\'t want them.',
+	        image: 'https://macmalloryo.edublogs.org/files/2014/03/cheetosawesome-1sa4d06.jpg',
+	        seller: user[3]
+	    },
+    ],
+    [
+	    {
+	        name: 'Ghetto Blaster',
+	        category: 'Electronics',
+	        description: 'Blew my hearing away. Don\'t need it anymore.',
+	        image: 'http://thumbs.dreamstime.com/z/retro-ghetto-blaster-18850075.jpgQ==',
+	        seller: user[4]
+	    },
+    ],
+    [
+	    {
+	        name: 'Couch',
+	        category: 'Furniture',
+	        description: 'Grew its own ecosystem. Go take it sledding.',
+	        image: 'http://www.theresilientfamily.com/wp-content/uploads/2012/01/old-couch.jpg',
+	        seller: user[5]
+	    }
+    ]
 ];
 
 function onlyUnique(value, index, self) { 
