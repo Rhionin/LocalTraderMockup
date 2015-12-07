@@ -5,7 +5,7 @@ var ProductHeader = React.createClass({
                 <h3 style={{textAlign:"center"}}>Ads</h3>
                 <div className="btn-group btn-group-justified" role="group">
                     <div className="btn-group btn-group-justified dropdown">
-                        <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <button className="btn btn-default dropdown-toggle btn-login" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Sort by
                             <span className="caret"></span>
                         </button>
@@ -17,7 +17,7 @@ var ProductHeader = React.createClass({
                     </div>
                     
                     <div className="btn-group btn-group-justified dropdown">
-                        <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <button className="btn btn-default dropdown-toggle btn-login" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Filter
                             <span className="caret"></span>
                         </button>

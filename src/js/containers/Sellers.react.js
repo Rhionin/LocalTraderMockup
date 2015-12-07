@@ -7,13 +7,13 @@ var Sellers = React.createClass( {
       var sellersList = [];
       
       for(var i = 0; i < user.length; i++){
-      	var primaryBackgroundColor = "#E6E6E1";
-      	var secondaryBackgroundColor = "#CCC";
+      	var primaryBackgroundColor = "#C4DDE9";
+      	var secondaryBackgroundColor = "#94BCCF";
       	var val = i % 2;
       	
       	if(val == 1){
-      		primaryBackgroundColor = "#F5F5EE";
-      		secondaryBackgroundColor = "#ECEAEA";
+      		primaryBackgroundColor = "#DFF0FA";
+      		secondaryBackgroundColor = "#C4DDE9";
       	}
       	
           sellersList.push(<Seller sellerId={i} secondaryColor={secondaryBackgroundColor} primaryColor={primaryBackgroundColor} image={user[i].img} name={user[i].name} happy={user[i].ratings.happy} sad={user[i].ratings.sad} sales={user[i].sales} purchases={user[i].purchases}/>);
@@ -51,7 +51,9 @@ var Seller = React.createClass({
                 			</Link>
                 		</div>
                 		<div className="seller-info-box">
-                			<label className="seller-name" value={this.props.name}>{this.props.name}</label> <br />
+                		    <Link onClick={this.openSeller} to="sellerinfo">
+                		    	<label className="seller-name" value={this.props.name}>{this.props.name}</label>
+                		    </Link><br />
                 			<div className="seller-details">
 			                  <img className="face-image" src="../src/images/face-happy.jpg" /> <label className="seller-rating" value={this.props.name}>{this.props.happy}</label> 
 			                  <img className="face-image" src="../src/images/face-sad.jpg" /> <label className="seller-rating" value={this.props.name}>{this.props.sad}</label> <br />
@@ -82,7 +84,7 @@ var SellerInfo = React.createClass({
 
             adList.push(
                 //<Products /> );
-                 <Ad name={seller_products[currentSellerView][i].name} category={seller_products[currentSellerView][i].category} description={seller_products[currentSellerView][i].description} image={seller_products[currentSellerView][i].image}/>
+                 <Ad name={seller_products[currentSellerView][i].name} category={seller_products[currentSellerView][i].category} description={seller_products[currentSellerView][i].description} image={seller_products[currentSellerView][i].image} isRating={false}/>
                  );
         }
         
@@ -199,7 +201,7 @@ var Ad = React.createClass({
                                     </table>
                                  </div>
                             </div>
-                            <MessageInput style={Style} callback={this.sendMessage}/>
+                            <MessageInput style={Style} callback={this.sendMessage} isRating={this.props.isRating}/>
                         </td>
                     </tr>
                 </table>

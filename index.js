@@ -26,7 +26,8 @@ ReactDOM.render(
             <Route path="/learnmore" component={LearnMore}/>
             <Route path="/sellerinfo" component={SellerInfo}/>
             <Route path="/products" component={Products}/>
-            <Route path="/myRatings" component={MyRatings}/>
+            <Route path="/disputes" component={MyRatings}/>
+            <Route path="/my-page" component={Rate}/>
         </Route>
     </Router>,
     document.getElementById('root')

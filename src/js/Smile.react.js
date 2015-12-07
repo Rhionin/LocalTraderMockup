@@ -8,7 +8,7 @@ var Smile = React.createClass( {
     },
 	render: function() {
 		return (
-		    <a href="#/myRatings">
+		    <a href="#/my-page">
 		        <img src="../src/images/face-happy.jpg" className="face-image">
 			        <button>{this.state.positive}</button>
 			    </img>

@@ -273,3 +273,12 @@ function onlyUnique(value, index, self) {
 }
 
 var productCategories = products.map(function(product) { return product.category || 'Misc'; }).filter(onlyUnique);
+console.log('1')
+var feedback = [
+	{ id: 0, product: products[0], user: user[0], rating: 0, conversation: [{who: 'Them', message: 'Your camera didn\'t have a retina display. False advertising. I want to return this and get my money back.'}, {who: 'You', message: 'I\'m sorry to hear you don\'t like the camera. Where shall we meet to make the exchange?'}] },
+	{ id: 1, product: products[1], user: user[1], rating: 1, conversation: [{who: 'Them', message: 'Your puppy was super cute. It won the lottery for me. Thanks!'}] },
+	{ id: 2, product: products[2], user: user[2], rating: 0, conversation: [{who: 'Them', message: 'You showed up late, and I missed my kid\'s football game'}] },
+	{ id: 3, product: products[3], user: user[2], rating: 1, conversation: [{who: 'Them', message: 'Delicious.'}] }
+];
+console.log('2')
+var disputes = feedback.filter(function(item) { console.log(item); return item.rating === 0; });

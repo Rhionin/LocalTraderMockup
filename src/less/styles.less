@@ -2,6 +2,31 @@
 @green-accent: #75e793;
 @dark-green-accent: #437D52;
 
+body{
+    background-color: #EDF6FB;
+}
+
+.learn-more-btn{
+    border-radius: 400px;
+    height: 200px;
+    width: 200px;
+    font-family: "Roboto";
+    opacity: 0.8;
+    padding: 70px 10px 0px 15px;
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.learn-more-label{
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: "Roboto";
+    color: rgb(237, 246, 251);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 40px;
+}
+
 #content-container {
     max-width: 800px;
     margin: 0 auto; /* center */
@@ -19,30 +44,37 @@
 
 #map {
     // width: 600px;
-    min-width: 500px;
+    min-width: 510px;
     // width: 100%
     // height: 480px;
-    min-height: 400px;
+    min-height: 620px;
     // height: 100%;
     float: right;
+    border: solid;
+    border-radius: 1;
+    border-color: #94BCCF;
 }
 
 .map-popup {
     h1 {
-        font-size: 150%;
+        font-size: 100%;
     }
     img.product {
         border-radius: 1px;
         border: solid;
-        width: 100px;
-        height: 100px;
-        margin: 5px;
+        width: 40px;
+        height: 40px;
+        margin: 2px;
     }
     table {
-        max-width: 300px;
+        max-width: 150px;
         .left {
-            min-width: 150px;
-        }   
+            min-width: 100px;
+        }
+        max-height: 100px;
+        .left {
+            min-height: 75px;
+        }
     }
 }
 
@@ -117,8 +149,8 @@
 }
 
 .face-image{
-    height:27px;
-    width:27px;
+    height:22px;
+    width:22px;
     margin-left:10px;
     border-radius:25px;
 }
@@ -128,6 +160,13 @@
     height: 200px;
     border-radius: 50px;
     padding: 20px;
+}
+
+.seller-image-sm{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    padding: 1px;
 }
 
 .ad-image-lg{
@@ -153,17 +192,70 @@
     float:left;
 }
 
+.main-page-panel{
+    background-color: #5F92AB !important;
+    height: 500px !important;
+    border-radius: 500px !important;
+}
+
+.main-panel-image{
+    border-radius: 500px !important;
+    box-shadow: 10px 15px 20px #144C67 !important;
+    margin-top: 30px !important;
+    margin-left: 40px !important;
+}
+
 .btn-login{
     margin-right: 10px;
     margin-top: 10px;
+    background-color: #266380;
+    color: #fff;
 }
 
 .btn-login:hover{
-    background-color: #ccc;
+    background-color: white;
+    color: #266380;
+}
+
+.btn-search{
+    background-color: #266380;
+    color: #fff;
+}
+
+.btn-search:hover{
+    background-color: white;
+    color: #266380;
+}
+
+.btn-dispute{
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #c63835;
+    color: #fff;
+}
+
+.btn-dispute:hover{
+    background-color: white;
+    color: #c63835;
 }
 
 .user-info-box{
-    margin: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.user-info-box a{
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.user-info-box button{
+    font-size: 80%;
+}
+
+.user-info{
+    float: right;
+    margin-right: 399px;
 }
 
 .main-header{
@@ -171,15 +263,26 @@
     background-color: #94BCCF;
 }
 
+.navbar-default .navbar-nav > li > a{
+    color: #266380 !important;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color: #fff !important;
+}
+
 .navbar-brand{
     font-family: 'Roboto' !important;
     font-size: 40px !important;
+    color: #266380 !important;
+}
+.navbar-brand:hover{
+    color: #fff !important;
 }
 
 .seller-info-body{
     width: 100%;
     height: 300px;
-    background-color: #ccc;
+    background-color: #94BCCF;
     border-radius: 20px;
 }
 
@@ -209,7 +312,7 @@
 .ad-info-body{
     margin-top: 20px;
     width: 100%;
-    background-color: #ccc;
+    background-color: #C4DDE9;
     border-radius: 20px;
     height: 310px;
 }
@@ -220,9 +323,9 @@
 }
 
 .ad-header{
-    background-color: #686868;
+    background-color: #3F758F;
     border-radius: 20px 20px 0px 0px;
-    color: #ccc;
+    color: #C4DDE9;
 }
 
 .ad-info-right{
@@ -244,13 +347,20 @@
 .ad-title,
 .seller-name-lg
 {
-    color: #686868;
+    color: #266380;
+    font-family: 'Roboto';
+}
+
+.panel-feedback{
+    background-color: #94BCCF !important;
+    border-radius: 20px !important;
+    color: #266380;
     font-family: 'Roboto';
 }
 
 .ad-container{
     height: 100%;
-    background-color: #F2EFEF;
+    background-color: #DFF0FA;
     width: 100%;
     border-radius: 20px;
     margin-top: 20px;
@@ -282,6 +392,24 @@ textarea {
     background-color: @green-accent;
 }
 
+.btn-rate{
+    float: right;
+    margin-right: 15px;
+    width: 100px;
+    background-color: #94BCCF;
+}
+
+.btn-rate:hover{
+    background-color: #3F758F;
+    color: #fff;
+}
+
+.rating-image{
+    float: right;
+    margin-right:25px;
+}
+
+
 .btn-write:hover{
     background-color: @dark-green-accent;
     color: white;
@@ -296,8 +424,19 @@ textarea {
     }
 }
 
+.panel-default{
+    border-color: #EDF6FB !important;
+    background-color: #EDF6FB !important;
+}
+
 .image-mini {
     width: 20px;
     height: 20px;
     margin: 5px;
+}
+
+.disputes-title{
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #266380;
 }

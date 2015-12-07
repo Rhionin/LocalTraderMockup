@@ -15,14 +15,16 @@ var Feedback = React.createClass({
             <img className="face-image" src="../src/images/face-sad.jpg" />
         
         return (
-            <div className="panel panel-default">
+            <div className="panel panel-feedback">
 			    <div className="row panel-body">
 			        <table style={{margin:'10px'}}>
 			            <tr>
 			                <td>
 			                    <span>
 			                        <span style={{margin:'5px'}}>{face}</span>
-			                        {this.props.userName}
+			                        <label className="seller-name">
+			                            {this.props.userName}
+			                        </label>
 			                    </span>
 			                    <div className="seller-image-border">
                                     <img className="seller-image" src={this.props.image}></img>
@@ -33,7 +35,7 @@ var Feedback = React.createClass({
                                     <img className='image-mini' src={this.props.product.image} />
                                     <strong>{this.props.product.name}</strong>
                                 </span><br/>
-			                    <div className="panel panel-default">
+			                    <div className="panel panel-feedback">
                 			        <div className="row panel-body">
                 			            {this.state.conversation.map(function(entry, i) {
                                             return <p key={i}><strong>{entry.who}:</strong> {entry.message}</p>

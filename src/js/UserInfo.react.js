@@ -9,7 +9,7 @@ var UserInfo = React.createClass( {
 	render: function() {
 		return (
 			<div className="user-info-box">
-                Joe Trader<br/>
+                <a href="#/my-page"><img className="seller-image-sm" src="https://pmcdeadline2.files.wordpress.com/2014/04/28-nic-cage-joe__140410220507.jpg" /> Joe</a><br/>
                 <Smile />
                 <Frown />
                 

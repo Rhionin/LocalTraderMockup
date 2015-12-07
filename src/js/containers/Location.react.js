@@ -100,12 +100,12 @@ var Location = React.createClass( {
 				<div className='panel-body'>
 					<div className="col-md-4">
 						<label>Filter by Category:</label><br/>
-						<DropdownButton bsStyle='primary' title={this.state.selectedCategoryFilter} id="bg-nested-dropdown">
+						<DropdownButton bsStyle='primary' title={this.state.selectedCategoryFilter} id="bg-nested-dropdown" className="btn-login">
 							{categoryFilterItems}
 						</DropdownButton><br/><br/>
 						
 						<label>View City:</label><br/>
-						<DropdownButton bsStyle='primary' title={this.state.selectedCity} id="bg-nested-dropdown">
+						<DropdownButton bsStyle='primary' title={this.state.selectedCity} id="bg-nested-dropdown" className="btn-login">
 							{cityMenuItems}
 						</DropdownButton><br/>
 					</div>
