@@ -197,6 +197,7 @@ var seller_products = [
 	        category: 'Electronics',
 	        description: 'A camera so digital that it has pixels. Mind blown.',
 	        image: 'https://images-na.ssl-images-amazon.com/images/G/01/electronics/cameras/samsung/2011/c26-B004OZ922E-1-l.jpg',
+	        price: '155$',
 	        seller: user[0]
 	    },
 	    {
@@ -204,6 +205,7 @@ var seller_products = [
 	        category: 'Electronics',
 	        description: 'Ultimate resolution.',
 	        image: 'https://farm4.staticflickr.com/3487/cameras/72157602280763141_model_huge_7523f21cc2.jpg',
+	        price: '555$',
 	        seller: user[0]
 	    }
 	],
@@ -213,6 +215,7 @@ var seller_products = [
 	        category: 'Pets',
 	        description: 'My dog had puppies. Can\'t keep them all, so please give them a loving home! <3',
 	        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJrap7s8HRCCC4KOhkd1SrZ94jvS0F1_h8Ohmme0iJPUszS1czjl-8Uc4',
+	        price: '200',
 	        seller: user[1]
 	    },
 	    {
@@ -220,6 +223,7 @@ var seller_products = [
 	        category: 'Pets',
 	        description: 'A very friendly Alligator',
 	        image: 'http://muchmoremuchier.files.wordpress.com/2012/03/gator.jpg',
+	        price: '2000$',
 	        seller: user[1]
 	    },
 	    {
@@ -227,6 +231,7 @@ var seller_products = [
 	        category: 'Pets',
 	        description: 'crushed my cat...  must get rid of it.',
 	        image: 'http://hippocritical.net/wp-content/uploads/2014/03/pet-hippo-Humphrey_2055153i.jpg',
+	        price: '1080$',
 	        seller: user[1]
 	    }
     ],
@@ -236,6 +241,7 @@ var seller_products = [
 	        category: 'Misc',
 	        description: 'Why do I still have fireworks? Independence day was like, forever ago.',
 	        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQNjV0yjQGauptx9bibYS80StBiDwoMxOeFtA0xahzbiy6MMCn',
+	        price: '50$',
 	        seller: user[2]
 	    },
     ],
@@ -245,6 +251,7 @@ var seller_products = [
 	        category: 'Misc',
 	        description: 'These are stale. I don\'t want them.',
 	        image: 'https://macmalloryo.edublogs.org/files/2014/03/cheetosawesome-1sa4d06.jpg',
+	        price: '10$',
 	        seller: user[3]
 	    },
     ],
@@ -254,6 +261,7 @@ var seller_products = [
 	        category: 'Electronics',
 	        description: 'Blew my hearing away. Don\'t need it anymore.',
 	        image: 'http://thumbs.dreamstime.com/z/retro-ghetto-blaster-18850075.jpgQ==',
+	        price: '4245$',
 	        seller: user[4]
 	    },
     ],
@@ -263,6 +271,7 @@ var seller_products = [
 	        category: 'Furniture',
 	        description: 'Grew its own ecosystem. Go take it sledding.',
 	        image: 'http://www.theresilientfamily.com/wp-content/uploads/2012/01/old-couch.jpg',
+	        price: '315$',
 	        seller: user[5]
 	    }
     ]

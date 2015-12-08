@@ -84,7 +84,7 @@ var SellerInfo = React.createClass({
 
             adList.push(
                 //<Products /> );
-                 <Ad name={seller_products[currentSellerView][i].name} category={seller_products[currentSellerView][i].category} description={seller_products[currentSellerView][i].description} image={seller_products[currentSellerView][i].image} isRating={false}/>
+                 <Ad price={seller_products[currentSellerView][i].price} name={seller_products[currentSellerView][i].name} category={seller_products[currentSellerView][i].category} description={seller_products[currentSellerView][i].description} image={seller_products[currentSellerView][i].image} isRating={false}/>
                  );
         }
         
@@ -197,7 +197,14 @@ var Ad = React.createClass({
                                                 <label className="ad-info-right"> {this.props.category} </label> 
                                             </td>
                                         </tr>
-                                        
+                                        <tr>
+                                            <td>
+                                                <label className="ad-info-left">Price: </label>
+                                            </td>
+                                            <td>
+                                                <label className="ad-info-right"> {this.props.price} </label> 
+                                            </td>
+                                        </tr>
                                     </table>
                                  </div>
                             </div>

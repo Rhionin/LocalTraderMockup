@@ -40,17 +40,29 @@ var Products = React.createClass ({
         if (!("ads" in this.props)) 
         {
             console.log("hi1")
-            ads = [{
-                img: "http://images.clipartpanda.com/lightning-bolt-clipart-dc6Mx6qc9.jpeg",
-                name: "Item1",
-                description: "this is the description",
-                user: "user1"
-            }, {
-                img: "http://images.clipartpanda.com/lightning-bolt-clipart-dc6Mx6qc9.jpeg",
-                name: "Item2",
-                description: "this is the description",
-                user: "user1"
-            }];
+            ads = [
+                {
+                    img: "http://www.ethicalconsumer.org/portals/0/images/reports/531333_large.jpg",
+                    name: "Television 33 inch",
+                    description: "Totally awesome tele",
+                    user: "user1",
+                    price: "1004$"
+                }, 
+                {
+                    img: "http://www.ethicalconsumer.org/portals/0/images/reports/531333_large.jpg",
+                    name: "Television 44 inch",
+                    description: "it has a scratch on the side",
+                    user: "user1",
+                    price: "1004$"
+                },
+                {
+                    img: "http://www.medgadget.com/img/lku2lzx0.jpg",
+                    name: "Item2",
+                    description: "this is the description",
+                    user: "user1",
+                    price: "1900$"
+                }
+            ];
         }
         else 
         {
@@ -66,26 +78,26 @@ var Products = React.createClass ({
                 user_stuff = (<div><p>User: {item.user}</p><UserInfo /></div>);
             }
             return (
-                <div>
+                <div className="product-box-category">
                 <hr />
                     <div className="btn-group btn-group-justified"  role="group">
                         <div className="btn-group">
-                            <img style={{height:50}} src={item.img} />
+                            <img className="category-img" style={{height:150, width: 150}} src={item.img} />
                         </div>
-                        <div className="btn-group">
+                        <div className="btn-group product-lables">
+                            <p>Description: {item.description} </p>
                             <p>Title: {item.name}</p>
+                            <p>Price: {item.price} </p>
                             <div>
                                 { user_stuff }
                             </div>
-                        </div>
-                        <div className="btn-group">
-                            <p>{item.description}</p>
-                        </div>
-                        <div className="btn-group">
-                            <p>{item.description}</p>
+                            
                         </div>
                     </div>
                 <hr />
+                 <div>
+                    <MessageProductInputs isRating={false}/>
+                </div>
                 </div>
             );
         });
@@ -96,4 +108,79 @@ var Products = React.createClass ({
             </div>
         );
    }
+});
+
+
+var MessageProductInputs = React.createClass({
+    
+    getInitialState: function () {
+        return {messageSent: false,
+                ratingSent: false,
+                Style : {backgroundColor : '#C4DDE9'}
+        };
+    },
+    
+    sendMessage: function(event){
+        var that = this;
+
+        var message = this.refs.message.getDOMNode().value;
+        if (message && message.length > 0) {
+            if (that.props.callback) {
+                that.props.callback(message);   
+            }
+            that.refs.message.value = "";
+            // this.state.messageSent = true; <- CJ here. I don't think this works. You have to call this.setState(), no?
+            that.setState({messageSent: true});
+            setTimeout(function() {
+                that.setState({messageSent: false});
+            }, 2000);
+        }
+        return false;
+    },
+    
+    sendRating: function(event){
+        var that = this;
+
+        var message = this.refs.message.getDOMNode().value;
+            if (message && message.length > 0) {
+            that.refs.message.value = "";
+            // this.state.messageSent = true; <- CJ here. I don't think this works. You have to call this.setState(), no?
+            that.setState({ratingSent: true});
+            setTimeout(function() {
+                that.setState({ratingSent: false});
+            }, 2000);
+        }
+        
+        return false;
+    },
+    
+    render: function() {
+        return (
+
+            <form className="form-vertical" onSubmit={this.sendMessage}>
+                <div className="ad-message-form">
+                    <textarea placeholder="Write a message..." rows="4" ref="message" cols="70"></textarea>
+                </div>
+                <label className="ad-info-right" ref="alert"></label>
+                
+                <input className="btn btn-write category-write-btn" type="button" value="Write" onClick={this.sendMessage} style={{}}/>
+                {this.props.isRating ? (
+                    <div style={{float:'right'}}>
+                        <input className="btn btn-rate" type="button" value="Rate" onClick={this.sendRating}/>
+                        <input className="face-image seller-info-left rating-image" type="image" disabled src="../src/images/face-sad.jpg" value="image_value" />
+                        <input className="face-image seller-info-left rating-image" type="image" disabled src="../src/images/face-happy.jpg" value="image_value" />
+                    </div>
+                ) : null}
+                
+                {this.state.messageSent ? (
+                    <p className="message-sent">message sent.</p>
+                ) : null}
+                
+                {this.state.ratingSent ? (
+                    <p>rating sent.</p>
+                ) : null}
+                
+            </form>
+        );
+    }
 });
